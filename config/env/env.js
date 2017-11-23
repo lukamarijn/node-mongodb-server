@@ -7,9 +7,11 @@ var env = {
     dbDatabase: process.env.DB_DATABASE || 'users'
 }
 
-var dburl = process.env.NODE_ENV === 'production' ?
+/*var dburl = process.env.NODE_ENV === 'production' ?
     'mongodb://' + env.dbUser + ':' + env.dbPassword + '@' + env.dbHost + ':' + env.dbPort + '/' + env.dbDatabase :
-    'mongodb://localhost/' + env.dbDatabase
+    'mongodb://localhost/' + env.dbDatabase*/
+
+var dburl = "mongodb://<dbuser>:<dbpassword>@ds147974.mlab.com:47974/firstmongodbapp";
 
 module.exports = {
     env: env,
